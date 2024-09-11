@@ -7,6 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grab Business Forum Invitation</title>
   <style>
+    @font-face {
+      font-family: 'Grab Community EN v2.0 Inline';
+      src: url('../fonts/Grab Community EN v2.0-Inline.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Grab Community Solid Bold';
+      src: url('../fonts/Grab Community Solid EN-Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Grab Community Solid Heavy';
+      src: url('../fonts/Grab Community Solid EN-Heavy.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Grab Community Solid Medium';
+      src: url('../fonts/Grab Community Solid EN-Medium.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Grab Community Solid Regular';
+      src: url('../fonts/Grab Community Solid EN-Regular.otf') format('opentype');
+    }
+
     body {
       font-family: 'Grab Community Solid Medium';
       src: url('../fonts/Grab Community Solid EN-Medium.otf') format('opentype');
@@ -60,7 +85,7 @@
 <body>
   <div class="email-container">
     <div class="header">
-      <img src="{{ asset('img/grab-business-forum-logo.svg') }}" alt="Grab Business Forum 2024">
+      <img src="/img/grab-business-forum-logo.svg" alt="Grab Business Forum 2024">
     </div>
 
     <div class="email-content">
