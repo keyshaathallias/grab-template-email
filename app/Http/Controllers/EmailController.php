@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\SendEmails;
+use App\Mail\SendEmails2;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
 
@@ -20,6 +21,7 @@ class EmailController extends Controller
             $qrCodeUrl = asset('storage/attachments/' . $qrCodeFilename);
 
             Mail::to($user->email)->send(new SendEmails($user->name, $messageContent, $qrCodeUrl));
+            Mail::to($user->email)->send(new SendEmails2($user->name));
         }
 
         return 'Emails Sent Successfully!';

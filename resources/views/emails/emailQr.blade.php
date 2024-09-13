@@ -6,20 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grab Business Forum Invitation</title>
-  <style>
-    @font-face {
-      font-family: 'Grab Community EN v2.0 Inline';
-      src: url('../fonts/Grab Community EN v2.0-Inline.otf') format('opentype');
-    }
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
     @font-face {
       font-family: 'Grab Community Solid Bold';
       src: url('../fonts/Grab Community Solid EN-Bold.otf') format('opentype');
-    }
-
-    @font-face {
-      font-family: 'Grab Community Solid Heavy';
-      src: url('../fonts/Grab Community Solid EN-Heavy.otf') format('opentype');
     }
 
     @font-face {
@@ -33,8 +29,7 @@
     }
 
     body {
-      font-family: 'Grab Community Solid Medium';
-      src: url('../fonts/Grab Community Solid EN-Medium.otf') format('opentype');
+      font-family: 'Grab Community Solid Regular';
       color: black;
     }
 
@@ -46,14 +41,12 @@
     }
 
     .header {
-      background-color: #005537;
-      color: white;
+      background-color: #005235;
       padding: 20px;
-      text-align: center;
     }
 
     .header img {
-      width: 100px;
+      width: 136px;
     }
 
     .email-content {
@@ -62,22 +55,37 @@
       border-radius: 8px;
     }
 
+    h3 {
+      font-family: 'Grab Community Solid Bold';
+    }
+
     p {
       line-height: 1.5;
     }
 
     .qr-code {
       text-align: center;
-      margin-top: 20px;
     }
 
     .qr-code img {
-      width: 150px;
-      height: 150px;
+      width: 300px;
+      height: 300px;
     }
 
     ul li {
       list-style: none;
+    }
+
+    .sponsors,
+    .media-partners {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
     }
   </style>
 </head>
@@ -85,7 +93,8 @@
 <body>
   <div class="email-container">
     <div class="header">
-      <img src="/img/grab-business-forum-logo.svg" alt="Grab Business Forum 2024">
+      {{-- <img src="img/grab-business-forum-logo.svg" alt="Grab Business Forum Logo" /> --}}
+      <img src="{{ asset('img/grab-business-forum-logo.svg') }}" alt="Grab Business Forum 2024">
     </div>
 
     <div class="email-content">
@@ -109,7 +118,8 @@
         <li>- Take the elevator to the Kempinski Grand Ballroom</li>
       </ul>
 
-      <p><strong>Grand Ballroom is located at the west Mall, different from the Kempinski Hotel Lobby.</strong></p>
+      <p><strong>Grand Ballroom is located at the west Mall, different from the Kempinski Hotel
+          Lobby.</strong></p>
 
       <p>Please note that you are eligible to attend the Executive Forum and all Business Talks Sessions.</p>
 
@@ -118,9 +128,11 @@
 
       <div class="qr-code">
         <img src="{{ $qrCodeUrl }}" alt="QR Code for {{ $name }}">
+        {{-- <img src="attachments/QR_Keysha.png" alt="QR Code"> --}}
       </div>
 
-      <p><strong>*Please bring your ID Card / KTP & make sure your name matches when registering.</strong></p>
+      <p><strong>*Please bring your ID Card / KTP & make sure your name matches when
+          registering.</strong></p>
 
       <p>In addition to gaining valuable insights, also anticipate exciting door prizes to be announced at the end of
         the
@@ -150,9 +162,19 @@
 
       <p>Warm regards,</p>
 
-      <img src="{{ asset('img/supported by.svg') }}" alt="Supported By">
-      <img src="{{ asset('img/media partner.svg') }}" alt="Media Partner">
-      <img src="{{ asset('img/footer.svg') }}" alt="Footer">
+      <div class="sponsors">
+        {{-- <img src="img/supported by.svg" alt="Sponsors" /> --}}
+        <img src="{{ asset('img/supported by.svg') }}" alt="Sponsors">
+      </div>
+
+      <div class="media-partners">
+        {{-- <img src="img/media partner.svg" alt="Media Partners" /> --}}
+        <img src="{{ asset('img/media partner.svg') }}" alt="Media Partners">
+      </div>
+
+    </div>
+    <div class="footer">
+      <img src="{{ asset('img/footer.svg') }}" alt="Footer" />
     </div>
   </div>
 </body>

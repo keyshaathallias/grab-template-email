@@ -6,23 +6,19 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendEmails extends Mailable
+class SendEmails2 extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $name;
-    public $messageContent;
-    public $qrCodeUrl;
 
-    public function __construct($name, $messageContent, $qrCodeUrl)
+    public function __construct($name)
     {
         $this->name = $name;
-        $this->messageContent = $messageContent;
-        $this->qrCodeUrl = $qrCodeUrl;
     }
 
     public function build() {
         return $this->subject('You Are Invited')
-                    ->view('emails.emailQr');
+                    ->view('emails.emailBtn');
     }
 }
